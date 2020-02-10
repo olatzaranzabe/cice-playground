@@ -1,10 +1,11 @@
 .wrapper {
     display: flex;
+    flex-direction: column;
 }
 
 .row {
     display: flex;
-    flex-direction: colum;
+    flex-direction: row;
 }
 
 .span-column-1 {
