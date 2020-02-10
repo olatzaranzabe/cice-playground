@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.box-first,
+.box-second {
+    display: flex;
+}
+.box-first-second,
+.box-first-first {
+    flex: 1;
+}
+.box-first-third {
+    flex: 5;
+}
