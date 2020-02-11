@@ -1,7 +1,6 @@
 {
   "name": "cice-playground",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"modules/**/*.{js,jsx,ts,tsx,json,css,md}\"",
@@ -32,5 +31,15 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olatzaranzabe/cice-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olatzaranzabe/cice-playground/issues"
+  },
+  "homepage": "https://github.com/olatzaranzabe/cice-playground#readme",
+  "description": ""
 }
