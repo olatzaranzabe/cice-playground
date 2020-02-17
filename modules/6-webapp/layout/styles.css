@@ -6,8 +6,8 @@
 @import './section.css';
 
 body {
-    font-family: sans-serif;
-    background-color: var(--surface-color);
+  font-family: sans-serif;
+  background-color: var(--surface-color);
 }
 
 h1,
@@ -16,13 +16,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--title-font);
-    font-size: var(--title-size);
+  font-family: var(--title-font);
+  font-size: var(--title-size);
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

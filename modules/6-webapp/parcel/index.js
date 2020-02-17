@@ -9,15 +9,15 @@ import './styles.css'
 const url = 'https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json'
 
 async function getComicUrl() {
-    const response = await fetch(url, {})
-    const comic = await response.json()
-    return comic.img
+  const response = await fetch(url, {})
+  const comic = await response.json()
+  return comic.img
 }
 
 async function findImg() {
-    const img = await getComicUrl()
+  const img = await getComicUrl()
 
-    document.querySelector('.main-img').setAttribute('src', img)
+  document.querySelector('.main-img').setAttribute('src', img)
 }
 
 findImg()
