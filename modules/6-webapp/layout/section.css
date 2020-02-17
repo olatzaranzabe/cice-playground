@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+.products-section {
+    display: flex;
+    flex-direction: column;
+}
+.items-container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 50px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas:
+        'double double double '
+        'simple simple simple simple simple simple ';
+}
+.double-box {
+    grid-area: double;
+}
+.simple-box {
+    grid-area: simple;
+}
