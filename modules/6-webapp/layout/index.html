@@ -1,130 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>CICE - Parcel</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-    </head>
-    <body>
-        <header class="header">
-            <span class="header__logo"></span>
-            <div class="header-search">
-                <i class="material-icons">
-                    search
-                </i>
-                <input type="text" class="header__browse" />
-            </div>
-            <a href="#messages">Mensajes</a>
-            <button>Regístrate o inicia sesión</button>
-            <button>
-                <i> </i>
-                Subir producto
-            </button>
-        </header>
-        <main class="main-container">
-            <section class="categories">
-                <span>
-                    wallapop, la plataforma líder de compraventa de productos de segunda mano</span
-                >
-                <h1>¿Qué estás buscando hoy?</h1>
-                <ul class="items-list">
-                    <li class="items-list-option">
-                        <a href="">Todas<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Coches<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Motos<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Electrónica<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Moda<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Todas<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Coches<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Motos<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Electrónica<i></i></a>
-                    </li>
-                    <li class="items-list-option">
-                        <a href="">Moda<i></i></a>
-                    </li>
-                </ul>
-            </section>
-            <section class="products-section">
-                <p></p>
-                <span></span>
-                <div>
-                    <ul class="items-container">
-                        <li class="double-box">
-                            <a href=""
-                                ><p>Object 1</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="double-box">
-                            <a href=""
-                                ><p>Object 2</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="double-box">
-                            <a href=""
-                                ><p>Object 3</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 4</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 5</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 6</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 7</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 8</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                        <li class="simple-box">
-                            <a href=""
-                                ><p>Object 9</p>
-                                <img src="" alt=""
-                            /></a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section></section>
-        </main>
-        <script src="./index.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CICE - Parcel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__logo"><i class="material-icons">school</i></span>
+
+      <div class="header__search">
+        <i class="material-icons header__search__icon">search</i>
+        <input
+          type="text"
+          placeholder="Buscar en todas las categorías"
+          class="header__search__browse"
+        />
+      </div>
+
+      <a href="#messages">Mensajes</a>
+
+      <button class="button button__secondary">Regístrate o inicia sesión</button>
+      <button class="button button__primary">
+        <i class="material-icons">add</i>Subir producto
+      </button>
+    </header>
+    <main>
+      <section class="wrapper categories">
+        <p>wallapop, la plataforma líder de compraventa de productos de Segunda mano</p>
+        <h2>¿Qué estás buscando hoy?</h2>
+
+        <div id="categories" class="categories__list">
+          <button id="first-slide"><i class="material-icons"></i></button>
+          <ul class="categories__list__items">
+            <li>
+              <a href=""><i class="material-icons">add</i>Todas las categorías</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>Motos</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>Coches</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>Motor y accesorios</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>Moda y accesorios</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>Inmobiliaria</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+            <li>
+              <a href=""><i class="material-icons">add</i>TV, Audio y Foto</a>
+            </li>
+          </ul>
+          <button id="last-slide"><i class="material-icons"></i></button>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
 </html>

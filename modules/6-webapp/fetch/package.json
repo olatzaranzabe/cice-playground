@@ -1,20 +1,20 @@
 {
-  "name": "cice-6-webapp-layout",
+  "name": "cice-fetch",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "keywords": [],
-  "author": "César Alberca",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "7.8.4",
+    "@babel/core": "^7.8.4",
     "parcel-bundler": "1.12.4"
   },
-  "dependencies": {
-    "reset.css": "^2.0.2"
-  },
-  "description": ""
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
