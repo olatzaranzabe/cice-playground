@@ -87,7 +87,7 @@ describe('arrays', () => {
       { name: 'Max', age: 20 },
       { name: 'Jane', age: 20 }
     ]
-
+    const actual = given.map()
     expect(actual).toEqual({
       20: [
         { name: 'Max', age: 20 },
