@@ -1,24 +1,29 @@
 describe('arrays', () => {
   it('should obtain the power of 2 for a given number of elements', () => {
     const given = [1, 2, 3]
-
+    const actual = given.map(x => x ** 2)
     expect(actual).toEqual([1, 4, 9])
   })
 
   it('should filter the even numbers', () => {
     const given = [1, 24, 3, 8, 10]
 
+    const actual = given.filter(x => x % 2 === 0)
     expect(actual).toEqual([24, 8, 10])
   })
 
   it('should add all the numbers', () => {
     const given = [1, 2, 3]
 
+    const actual = given.reduce((acc, b) => acc + b, 0)
+
     expect(actual).toBe(6)
   })
 
   it('should sort alphabetically', () => {
     const given = ['javascript', 'java', 'python', 'lua']
+
+    const actual = given.sort()
 
     expect(actual).toEqual(['java', 'javascript', 'lua', 'python'])
   })
@@ -39,17 +44,33 @@ describe('arrays', () => {
       }
     ]
 
+    const actual = animals.filter(x => x.legs > 2).map(y => y.name)
     expect(actual).toEqual(['giraffe', 'dog'])
   })
 
   it('should remove vowels from a word', () => {
     const word = 'hello world'
+    Array.from(word)
+
+    const actual = word
+      .split('')
+      .filter(x => !['a', 'e', 'i', 'o', 'u'].includes(x))
+      .join('')
 
     expect(actual).toBe('hll wrld')
   })
 
   it('should return a count of all repeated elements', () => {
     const given = ['🍋', '🍉', '🍒', '🍋', '🍋', '🍎', '🍎', '🍐']
+
+    const actual = given.reduce((acc, b) => {
+      if (acc[b] === undefined) {
+        acc[b] = 1
+      } else {
+        acc[b] += 1
+      }
+      return acc
+    }, {})
 
     expect(actual).toEqual({
       '🍋': 3,
@@ -76,7 +97,7 @@ describe('arrays', () => {
     })
   })
 
-  it('should group all books in a single array without duplicates', () => {
+  it.only('should group all books in a single array without duplicates', () => {
     const given = [
       {
         name: 'Anna',
@@ -94,6 +115,8 @@ describe('arrays', () => {
         age: 18
       }
     ]
+
+    const actual = given.map(x => x.books).reduce(x.books)
 
     expect(actual).toEqual([
       'Dune',
