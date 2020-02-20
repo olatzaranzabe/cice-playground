@@ -87,7 +87,15 @@ describe('arrays', () => {
       { name: 'Max', age: 20 },
       { name: 'Jane', age: 20 }
     ]
-    const actual = given.map()
+    const actual = given.reduce((acc, x) => {
+      if (acc[x.age] === undefined) {
+        acc[x.age] = [x]
+      } else {
+        acc[x.age].push(x)
+      }
+      return acc
+    }, {})
+
     expect(actual).toEqual({
       20: [
         { name: 'Max', age: 20 },
@@ -97,7 +105,7 @@ describe('arrays', () => {
     })
   })
 
-  it.only('should group all books in a single array without duplicates', () => {
+  it('should group all books in a single array without duplicates', () => {
     const given = [
       {
         name: 'Anna',
@@ -131,11 +139,27 @@ describe('arrays', () => {
   it('should make sure every element of the array is positive', () => {
     const given = [1, -2, -5, 9]
 
+    const newGiven = given.map(x => {
+      if (x => 0) {
+        return x
+      }
+    })
+    let actual
+    if (given === newGiven) {
+      actual = true
+    } else {
+      actual = false
+    }
+
     expect(actual).toBe(false)
   })
 
-  it('should add the length of all sub arrays', () => {
+  it.only('should add the length of all sub arrays', () => {
     const given = [1, [2, 3], [4, 5], [6, 7]]
+    const actual = given.map(x => {
+      const acc = []
+      acc.push(x.length)
+    })
 
     expect(actual).toBe(7)
   })
