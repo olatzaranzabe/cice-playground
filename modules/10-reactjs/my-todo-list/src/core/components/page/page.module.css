@@ -1,0 +1,7 @@
+.page {
+    margin: 10%;
+    width: 80%;
+    height: 60%;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
