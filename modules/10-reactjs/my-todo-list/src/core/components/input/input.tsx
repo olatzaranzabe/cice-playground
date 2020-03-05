@@ -4,21 +4,33 @@ import styles from './input.module.css'
 
 const cx = bind(styles)
 
-interface Props extends React.HTMLProps<HTMLInputElement> {
-    theme?: 'primary' | 'secondary'
+interface Props  {
+    value: string
+    label: string
+    onChange(value: string): void
+    required?: boolean
   }
   
+ 
   export const Input: React.FunctionComponent<Props> = ({
-      children,
-      className,
-      theme,
-      ...rest
+      onChange,
+      label,
+      value,
+      required
     }) => {
       return (
-        <input
-          className={cx('input', theme, className)}
-          {...rest}
-        />
+          <label>
+              {label}{required ? '*' : ''}
+              <input
+                value={value}
+                className={cx('input', {required})}
+                onChange={event => onChange(event.target.value)}
+            />
+            <span
+            className={cx('hidden', {show: value.length === 0 })}
+            >Campo requerido</span>
+          </label>
+        
 
       )
     };
