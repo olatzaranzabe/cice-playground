@@ -21,5 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 .idea
 .vscode
+=======
+
+/storybook-static
+>>>>>>> c099ce8f30353423888ba5d17d7885c1f849212a
