@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'
-import App from './App'
-=======
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/reset.css'
@@ -11,7 +5,6 @@ import './styles/theme.css'
 import './styles/typography.css'
 import './styles/index.css'
 import { App } from './app'
->>>>>>> c099ce8f30353423888ba5d17d7885c1f849212a
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<App />, document.getElementById('root'))

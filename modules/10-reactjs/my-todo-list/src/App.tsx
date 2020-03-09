@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { TodoList } from './features/todo/ui/todo-list/todo-list'
+import { Todo } from './features/todo/domain/todo'
+import { TodoCreate } from './features/todo/ui/todo-create/todo-create'
+import { Page } from './core/components/page/page'
 
-function App() {
+export function App() {
+  const [todos, setTodos] = useState<Todo[]>([])
+
+  function createTodo(todoText: string) {
+    const newTodo = { id: Math.random() * 1000, text: todoText, completed: false }
+    setTodos([...todos, newTodo])
+  }
+
+  function completeTodo(id: number) {
+    setTodos(
+      todos.map(todo => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed
+          }
+        }
+
+        return todo
+      })
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Page>
+      <TodoList todos={todos} onCompleteTodo={completeTodo}></TodoList>
+      <TodoCreate onCreate={createTodo} />
+    </Page>
+  )
 }
-
-export default App;
