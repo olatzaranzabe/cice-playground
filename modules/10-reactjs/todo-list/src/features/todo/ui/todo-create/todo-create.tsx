@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { Button } from '../../../../core/components/button/button'
+import { Todo } from '../../domain/todo';
 
 interface Props {
   onCreate(todoText: string): void
+  todos:Todo[]
 }
 
-export const TodoCreate: React.FunctionComponent<Props> = ({ onCreate }) => {
+export const TodoCreate: React.FunctionComponent<Props> = ({ onCreate, todos }) => {
   const [todoText, setTodoText] = useState('')
-
+  
   const clearTodo = () => setTodoText('')
-
+  todos.map( todo=> todo.text === todoText)
   return (
     <form
       onSubmit={event => {
