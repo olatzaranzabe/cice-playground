@@ -10,12 +10,8 @@
     "@types/node": "12.12.28",
     "@types/react": "16.9.22",
     "@types/react-dom": "16.9.5",
-<<<<<<< HEAD
-    "classnames": "^2.2.6",
-=======
     "axios": "0.19.2",
     "classnames": "2.2.6",
->>>>>>> bbf40811791f4f489840d8d07e56412461430ead
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts": "3.4.0",
