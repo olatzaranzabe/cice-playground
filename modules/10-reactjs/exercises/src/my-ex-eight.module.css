@@ -1,0 +1,6 @@
+.graph {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(red var(--graph-percentage), transparent var(--graph-percentage));
+}
