@@ -10,6 +10,7 @@ import { MyExSix } from './my-ex-six';
 import { MyExSeven } from './my-ex-seven';
 import { MyExEight } from './my-ex-eight';
 import { MyExNine } from './my-ex-nine';
+import { MyExTen } from './my-ex-ten';
 import { ExerciseTwo } from './exercise-two';
 import { ExerciseThree } from './exercise-three';
 import { ExerciseFour } from './exercise-four';
@@ -32,6 +33,7 @@ export const App: React.FC = () => {
       <Link to="/my-ex-seven">My exercise seven</Link>
       <Link to="/my-ex-eight">My exercise eight</Link>
       <Link to="/my-ex-nine">My exercise nine</Link>
+      <Link to="/my-ex-ten">My exercise ten</Link>
 
       <Link to="/exercise-one">Exercise one</Link>
       <Link to="/exercise-two">Exercise two</Link>
@@ -71,6 +73,10 @@ export const App: React.FC = () => {
       </Route>
       <Route path="/my-ex-nine">
          <MyExNine />
+         </Route>
+         <Route path="/my-ex-ten">
+         <MyExTen />
+         </Route>
       <Route path="/exercise-two">
         <ExerciseTwo />
       </Route>
@@ -92,7 +98,8 @@ export const App: React.FC = () => {
       <Route path="/exercise-eight">
         <ExerciseEight percentage={70} />
         </Route>
-      </Route>
+
+  
 
     </BrowserRouter>
 

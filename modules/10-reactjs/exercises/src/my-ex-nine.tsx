@@ -1,14 +1,23 @@
-import React, { useState, CSSProperties} from 'react'
-import styles from './my-ex-eight.module.css'
+import React, { useState } from 'react'
+import styles from './my-ex-nine.module.css'
 
 export const MyExNine: React.FC = () => {
 
-  const [ percentage, setPercentage ] = useState(0)
-    const degrees = ( 360 * 100)/ percentage
+  const getWidth = () => window.innerWidth 
+  const getHeight = () => window.innerHeight
+  
+  const [ pageHeight, setPageHeight ] = useState(getHeight())
+  const [ pageWidth, setPageWidth ] = useState(getWidth())
+  const resizeListener = () => {
+    setPageHeight(getHeight())
+    setPageWidth(getWidth())
+  }
+  window.addEventListener('resize', resizeListener);
+
  return (
   <>
-    <div className={styles.graph} style={{'--graph-percentage': `${degrees}deg`} as CSSProperties}></div>
-    <p>{percentage}</p>
+    <p>height: {pageHeight}px </p>
+    <p>width: {pageWidth}px </p>
   </>
  )
 }

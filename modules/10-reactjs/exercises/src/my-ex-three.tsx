@@ -13,7 +13,7 @@ export const MyExThree: React.FC = () => {
   }
  return (
   <div>
-    <input type="text" value={inputValue} onChange={event => handlePress(event)} />    
+    <input aria-label="input" type="text" value={inputValue} onChange={event => handlePress(event)} />    
   </div>
  )
 }
