@@ -2,7 +2,7 @@ import { Todo } from '../../domain/todo'
 
 type TodoPayload = Pick<Todo, 'id' | 'text'>
 
-export interface CreateTodoAction {
+interface CreateTodoAction {
   type: 'CREATE_TODO'
   payload: TodoPayload
 }
@@ -12,11 +12,18 @@ interface EditTodoAction {
   payload: TodoPayload
 }
 
-export const createTodo = (payload: CreateTodoPayload): CreateTodoAction => {
+export const createTodo = (payload: TodoPayload): TodoAction => {
   return {
     type: 'CREATE_TODO',
     payload
   }
 }
 
-export type TodoAction = CreateTodoAction
+export const editTodo = (payload: TodoPayload): TodoAction => {
+  return {
+    type: 'EDIT_TODO',
+    payload
+  }
+}
+
+export type TodoAction = CreateTodoAction | EditTodoAction
