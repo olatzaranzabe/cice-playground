@@ -1,5 +1,6 @@
 import { double } from './exercise-1'
 import { tap } from 'rxjs/operators'
+import { onClickCount } from './my-exercise-3';
 
 double([1, 2, 3, 4, 5]).pipe(
   tap(x => {
@@ -7,3 +8,5 @@ double([1, 2, 3, 4, 5]).pipe(
     output.innerHTML += `Value ${x} emitted<br/>`
   })
 ).subscribe()
+
+onClickCount().pipe(render('#exercise-3'))
