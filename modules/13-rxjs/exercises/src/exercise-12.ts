@@ -3,7 +3,7 @@ import { filter, map, tap } from 'rxjs/operators'
 
 const state = new BehaviorSubject({ counter: 0, isStarted: false })
 
-export const mycounter = () => state.asObservable().pipe(map(x => x.counter))
+export const counter = () => state.asObservable().pipe(map(x => x.counter))
 export const watch = () =>
   interval(1_000).pipe(
     filter(() => state.value.isStarted),
@@ -14,9 +14,3 @@ export const play = () =>
   fromEvent(document.querySelector('#exercise-12-play')!, 'click').pipe(
     tap(() => state.next({ ...state.value, isStarted: true }))
   )
-
-  export const play = () =>
-  fromEvent(document.querySelector('#exercise-12-play')!, 'click').pipe(
-    tap(() => state.next({ ...state.value, isStarted: false }))
-  )
-
